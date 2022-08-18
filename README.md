@@ -1,0 +1,2 @@
+# cookiecutter-python
+cookiecutterを用いてPythonの雛形を作成
