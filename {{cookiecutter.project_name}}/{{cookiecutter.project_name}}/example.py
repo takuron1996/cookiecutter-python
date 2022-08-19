@@ -11,7 +11,11 @@ __date__ = '{{cookiecutter.date}}'
 def main():
     """提出プログラム
     """
-    print("hello")
+    a = int(input())
+    b, c = tuple(map(int, input().split()))
+    s = input()
+
+    print(f"{a + b + c} {s}")
 
 
 if __name__ == "__main__":
