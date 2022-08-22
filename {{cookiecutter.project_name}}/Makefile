@@ -14,7 +14,7 @@ EXCLUDE = -not -name .coveragerc -not -name .gitignore
 run: format
 	poetry run python $(RUN_FILE)
 
-test: 
+test: format
 	poetry run pytest --cov -v --cov-report=html
 
 html: test
