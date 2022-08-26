@@ -34,8 +34,7 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 ## Make
 
 ### インストール方法（windows）
-1. [Make for Windows] installerをダウンロード
-1. 「Download」 の「Complete packages, except sources」の右横の 「Setup」をクリック
+1. [Make for Windows] にアクセスして、「Download」 の「Complete packages, except sources」の右横の 「Setup」をクリック
 1. installerを使用してinstall
 1. システム環境変数 Pathに，C:\Program Files (x86)\GnuWin32\bin を追加
 
