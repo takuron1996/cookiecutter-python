@@ -13,12 +13,6 @@
 pip install cookiecutter
 ```
 
-### 設定
-.venvをプロジェクトフォルダに生成するように設定
-```bash
-poetry config virtualenvs.in-project true
-```
-
 ## Poetry
 
 ### インストール方法（windows powershell）
@@ -29,6 +23,12 @@ poetry config virtualenvs.in-project true
 ### インストール方法（osx / linux / bashonwindow）
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
+```
+
+### 設定
+.venvをプロジェクトフォルダに生成するように設定
+```bash
+poetry config virtualenvs.in-project true
 ```
 
 ## Make
