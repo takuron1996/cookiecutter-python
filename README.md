@@ -26,6 +26,11 @@ curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 ### 設定
+PATHを設定（コマンド実行後にパスを通す）
+```bash
+curl -sSL https://install.python-poetry.org | sudo POETRY_HOME=/etc/poetry python3 -
+```
+
 .venvをプロジェクトフォルダに生成するように設定
 ```bash
 poetry config virtualenvs.in-project true
