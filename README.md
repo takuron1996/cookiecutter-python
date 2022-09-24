@@ -28,7 +28,7 @@ poetry config virtualenvs.in-project true
 
 ### インストール方法（osx / linux / bashonwindow）
 ```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 ## Make
