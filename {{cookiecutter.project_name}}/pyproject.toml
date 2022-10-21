@@ -8,7 +8,7 @@ authors = ["{{cookiecutter.author}}"]
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^6.2.5"
 yapf = "^0.32.0"
 pylint = "^2.14.5"
 pytest-cov = "^3.0.0"
