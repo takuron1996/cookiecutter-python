@@ -9,11 +9,32 @@ python = "^3.10.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
-yapf = "^0.32.0"
 pylint = "^2.14.5"
 pytest-cov = "^3.0.0"
 toml = "^0.10.2"
+black = "^22.10.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+include = '\.py$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''

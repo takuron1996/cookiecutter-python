@@ -1,7 +1,6 @@
 SHELL = /bin/bash
 PYLINT = poetry run pylint
-FORMAT = poetry run yapf
-STYLE = pep8
+FORMAT = poetry run black
 LINTRCF	= pylintrc.txt
 LINTRST = pylintresult.txt
 RUN_FILE = {{cookiecutter.project_name}}/example.py
@@ -27,7 +26,7 @@ lint: format
 	less $(LINTRST)
 
 format:
-	@$(FORMAT) -e $(VENV) -vv -i -r --style $(STYLE) .
+	@$(FORMAT) .
 
 clean:
 	@if [ -d $(VENV) ]; then echo "sudo rm -rf $(VENV)"; sudo rm -rf $(VENV); fi
