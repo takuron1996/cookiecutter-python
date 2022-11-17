@@ -29,8 +29,8 @@ format:
 	@$(FORMAT) .
 
 clean:
-	@if [ -d $(VENV) ]; then echo "sudo rm -rf $(VENV)"; sudo rm -rf $(VENV); fi
-	@if [ -d $(COVERAGE) ]; then echo "sudo rm -rf $(COVERAGE)"; sudo rm -rf $(COVERAGE); fi
+	@if [ -d $(VENV) ]; then echo "sudo rm -rf $(VENV)"; rm -rf $(VENV); fi
+	@if [ -d $(COVERAGE) ]; then echo "sudo rm -rf $(COVERAGE)"; rm -rf $(COVERAGE); fi
 	@if [ -e $(LINTRST) ] ; then echo "rm -f $(LINTRST)" ; rm -f $(LINTRST) ; fi
 	@find . -maxdepth 1 $(EXCLUDE) -type f -name ".*" -exec rm {} ";" -exec echo rm -f {} ";"
 	@for each in ${PYCS} ; do echo "rm -rf $${each}" ; rm -rf $${each} ; done
