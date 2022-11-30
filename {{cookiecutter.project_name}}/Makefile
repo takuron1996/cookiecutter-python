@@ -1,6 +1,8 @@
 SHELL = /bin/bash
 PYLINT = poetry run pylint
 FORMAT = poetry run black
+FORMAT_BLACK = poetry run black
+FORMAT_ISORT = poetry run isort
 LINTRCF	= pylintrc.txt
 LINTRST = pylintresult.txt
 RUN_FILE = {{cookiecutter.project_name}}/example.py
@@ -26,7 +28,8 @@ lint: format
 	less $(LINTRST)
 
 format:
-	@$(FORMAT) .
+	@$(FORMAT_BLACK) .
+	@$(FORMAT_ISORT) .
 
 clean:
 	@if [ -d $(VENV) ]; then echo "rm -rf $(VENV)"; rm -rf $(VENV); fi
