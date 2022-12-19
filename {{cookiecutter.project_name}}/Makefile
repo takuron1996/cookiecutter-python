@@ -8,6 +8,7 @@ LINTRST = pylintresult.txt
 RUN_FILE = {{cookiecutter.project_name}}/example.py
 TEST = tests
 COVERAGE = htmlcov
+DOCS = docs
 PYCS = $(shell find . -type d -name .venv -prune -o -type d -name "__pycache__" -print)
 VENV = .venv
 EXCLUDE = -not -name .coveragerc -not -name .gitignore
@@ -44,3 +45,11 @@ install:
 
 update:
 	poetry update
+
+docs:
+	poetry run pdoc {{cookiecutter.project_name}} --html -o $(DOCS) --force
+	poetry run pdoc tests --html -o $(DOCS) --force
+
+
+check: format
+	poetry run mypy --install-types --non-interactive
