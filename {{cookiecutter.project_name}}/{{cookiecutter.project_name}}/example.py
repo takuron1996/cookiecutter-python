@@ -16,8 +16,3 @@ def main():
     s = input()
 
     print(f"{a + b + c} {s}")
-
-
-if __name__ == "__main__":
-
-    main()
